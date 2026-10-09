@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div>
+                <p class="eyebrow">MY PRODUCTIVITY</p>
+                <h1>Todo List<span>.</span></h1>
+                <p class="subtitle">Atur tugasmu, selesaikan satu per satu.</p>
+            </div>
+        </header>
+
+        <form id="todo-form">
+            <input
+                type="text"
+                id="todo-input"
+                placeholder="Apa yang ingin kamu kerjakan?"
+                autocomplete="off"
+                required
+            >
+            <button type="submit" class="add-btn">+ Tambah</button>
+        </form>
+
+        <section class="toolbar">
+            <div class="filters" aria-label="Filter tugas">
+                <button type="button" class="filter-btn active" data-filter="all">
+                    Semua
+                </button>
+                <button type="button" class="filter-btn" data-filter="active">
+                    Aktif
+                </button>
+                <button type="button" class="filter-btn" data-filter="completed">
+                    Selesai
+                </button>
+            </div>
+
+            <span id="todo-count">0 tugas tersisa</span>
+        </section>
+
+        <ul id="todo-list"></ul>
+
+        <p id="empty-state">Belum ada tugas. Yuk, tambahkan tugas pertamamu!</p>
+
+        <footer>
+            <span>Drag tugas untuk mengurutkan ↕</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
